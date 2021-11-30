@@ -11,9 +11,9 @@ USER root
 RUN apt update
 RUN apt -y install nodejs npm maven docker docker-compose
 RUN npm install -g caprover
+RUN dockerd
 
 USER jenkins
 
-RUN dockerd
 
 EXPOSE 8080
