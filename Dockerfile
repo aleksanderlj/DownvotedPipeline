@@ -13,3 +13,5 @@ RUN apt -y install nodejs npm maven docker docker-compose
 RUN npm install -g caprover
 
 USER jenkins
+
+EXPOSE 8080
