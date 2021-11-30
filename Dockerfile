@@ -11,7 +11,6 @@ USER root
 RUN apt update
 RUN apt -y install nodejs npm maven docker docker-compose
 RUN npm install -g caprover
-RUN groupadd docker
 RUN usermod -aG docker jenkins
 
 USER jenkins
