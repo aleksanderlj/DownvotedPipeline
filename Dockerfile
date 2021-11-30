@@ -14,4 +14,6 @@ RUN npm install -g caprover
 
 USER jenkins
 
+RUN dockerd
+
 EXPOSE 8080
