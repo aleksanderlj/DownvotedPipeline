@@ -16,7 +16,7 @@ services:
     container_name: jenkins
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     network_mode: host
     volumes:
       - /var/jenkins_home:/var/jenkins_home
