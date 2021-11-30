@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  caprover:
+    container_name: caprover
+    image: caprover/caprover
+
+    volumes:
+      - /captain:/captain
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3000:3000"
+  jenkins:
+    container_name: jenkins
+    build:
+      dockerfile: dockerfile
+    network_mode: host
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    restart: always
