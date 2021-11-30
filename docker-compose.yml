@@ -17,7 +17,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    network_mode: host
+    network_mode: "host"
     privileged: true
     volumes:
       - /var/jenkins_home:/var/jenkins_home
