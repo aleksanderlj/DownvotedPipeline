@@ -14,6 +14,7 @@ RUN npm install -g caprover
 RUN usermod -u 1201 -aG docker jenkins
 
 USER jenkins
+WORKDIR /
 RUN caprover login -u captain.downvoted.dk -p jonatandahl -n captain-01
 
 
