@@ -16,7 +16,6 @@ RUN usermod -u 1201 -aG docker jenkins
 USER jenkins
 WORKDIR /
 RUN caprover login -u captain.downvoted.dk -p jonatandahl -n captain-01
-RUN docker login -u amtoft -p LtS5fwvhCsh4PL
 
 
 EXPOSE 8080
